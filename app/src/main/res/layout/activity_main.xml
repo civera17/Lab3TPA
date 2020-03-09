@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonToggleHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="2dp"
+        android:onClick="hour"
+        android:text="Hours"
+        app:layout_constraintEnd_toStartOf="@+id/buttonToggleMinutes"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonToggleMinutes" />
+
+    <Button
+        android:id="@+id/buttonToggleMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:onClick="minute"
+        android:text="Minutes"
+        app:layout_constraintEnd_toStartOf="@+id/buttonToggleSeconds"
+        app:layout_constraintStart_toEndOf="@+id/buttonToggleHours"
+        app:layout_constraintTop_toBottomOf="@+id/fullDateText" />
+
+    <Button
+        android:id="@+id/buttonToggleSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:onClick="second"
+        android:text="Seconds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonToggleMinutes"
+        app:layout_constraintTop_toTopOf="@+id/buttonToggleMinutes" />
+
+    <TextView
+        android:id="@+id/secundeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="Secunde"
+        app:layout_constraintEnd_toEndOf="@+id/buttonToggleSeconds"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToggleSeconds" />
+
+    <TextView
+        android:id="@+id/fullDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="7dp"
+        android:text="Full"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/buttonFullDate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFullDate" />
+
+    <TextView
+        android:id="@+id/minuteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="10dp"
+        android:text="Minute"
+        app:layout_constraintStart_toStartOf="@+id/buttonToggleMinutes"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToggleMinutes" />
+
+    <TextView
+        android:id="@+id/oreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:text="Ore"
+        app:layout_constraintStart_toStartOf="@+id/buttonToggleHours"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToggleHours" />
+
+    <Button
+        android:id="@+id/buttonFullDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="93dp"
+        android:onClick="fullTime"
+        android:text="Full Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
